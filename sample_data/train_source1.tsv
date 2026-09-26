@@ -1,0 +1,91 @@
+entity_id	business_name	business_address	country
+S1-000001	Dream Construction Limited	16-11-23/37/A, Sagar Hotel Building, Osarambagh, Hyderabad, Telangana 500036	India
+S1-000002	Green Logistics Private Limited	E-7, Second Floor, South Extension, New Delhi, Delhi 110049	India
+S1-000003	Silver Constructions LLP	101 CTS No, 917/18 F P No, British Library Road, Pune, Maharashtra 411004	India
+S1-000004	Shiva Management Private Limited	D No. 20-6-3/12, Dantuluri Vari Street, Ayodyanagar, Vijayawada, Andhra Pradesh 520003	India
+S1-000005	Alpha Media Private Limited	28-B, Chand Bihari Nagar, Khatipura, Jaipur, Rajasthan 302012	India
+S1-000006	Surya Energy Private Limited	C-252-A, Malviya Nagar, Hans Marg, Jaipur, Rajasthan 302017	India
+S1-000007	Indian Brothers Private Limited	17/1, Lower Ground Floor, 1st Cross, Lalbagh Road, Bangalore, Karnataka 560027	India
+S1-000008	Apex Technologies LLP	Plot 44, Electronic City Phase 1, Hosur Road, Bangalore, Karnataka 560100	India
+S1-000009	Kalyan Jewellers Limited	Shop 12, Ground Floor, MG Road, Somajiguda, Hyderabad, Telangana 500082	India
+S1-000010	Maruthi Traders Private Limited	4-1-898, Tilak Road, Abids, Hyderabad, Telangana 500001	India
+S1-000011	Creative Solutions Private Limited	SCO 88-89, Sector 17-C, Chandigarh, Punjab 160017	India
+S1-000012	Modern Engineering Limited	B-14, Industrial Area, Phase II, Mayapuri, New Delhi, Delhi 110064	India
+S1-000013	Royal Healthcare Private Limited	23/4, Park Street, Near Park Plaza, Kolkata, West Bengal 700016	India
+S1-000014	Prime Retail LLP	55, Commercial Street, Tasker Town, Bangalore, Karnataka 560001	India
+S1-000015	Universal Exports Limited	Office 402, Trade Centre, BKC, Bandra, Mumbai, Maharashtra 400051	India
+S1-000016	Pacific Coast Logistics LLC	1420 Harbor Blvd, Suite 300, Long Beach, CA 90802	US
+S1-000017	Hudson River Consulting Inc	350 5th Avenue, 59th Floor, New York, NY 10118	US
+S1-000018	Lone Star Manufacturing Corp	1200 Industrial Parkway, Building B, Houston, TX 77041	US
+S1-000019	Midwest Agricultural Supplies LLC	4450 Cornhusker Highway, Lincoln, NE 68504	US
+S1-000020	Summit Peak Software Inc	1801 California Street, Suite 2400, Denver, CO 80202	US
+S1-000021	Great Lakes Distribution Corporation	600 Renaissance Center, Suite 1400, Detroit, MI 48243	US
+S1-000022	Chesapeake Maritime Services LLC	201 E Baltimore Street, 12th Floor, Baltimore, MD 21202	US
+S1-000023	Sonoran Desert Energy Corp	2400 E Camelback Road, Suite 700, Phoenix, AZ 85016	US
+S1-000024	Cascade Timber Holdings LLC	111 SW 5th Avenue, Suite 1900, Portland, OR 97204	US
+S1-000025	New England Bioscience Inc	75 Cambridge Parkway, Suite 400, Cambridge, MA 02142	US
+S1-000026	Atelier Du Rhone SARL	14 Rue De La Republique, Lyon, Auvergne-Rhone-Alpes 69002	France
+S1-000027	Bordeaux Vignobles Distribution SAS	25 Cours De L Intendance, Bordeaux, Nouvelle-Aquitaine 33000	France
+S1-000028	Parisienne De Conseils Societe	42 Avenue Montaigne, Paris, Ile-De-France 75008	France
+S1-000029	Provence Logistique Transport SARL	120 Boulevard National, Marseille, Provence-Alpes-Cote d Azur 13003	France
+S1-000030	Nord Industrie Mecanique SAS	58 Rue Nationale, Lille, Hauts-De-France 59000	France
+S1-000031	Dream Construction North Limited	16-11-23/37/A, Sagar Hotel Building, Osarambagh, Hyderabad, Telangana 500036	India
+S1-000032	Green Logistics North Private Limited	E-7, Second Floor, South Extension, New Delhi, Delhi 110049	India
+S1-000033	Silver Constructions North LLP	101 CTS No, 917/18 F P No, British Library Road, Pune, Maharashtra 411004	India
+S1-000034	Shiva Management North Private Limited	D No. 20-6-3/12, Dantuluri Vari Street, Ayodyanagar, Vijayawada, Andhra Pradesh 520003	India
+S1-000035	Alpha Media North Private Limited	28-B, Chand Bihari Nagar, Khatipura, Jaipur, Rajasthan 302012	India
+S1-000036	Surya Energy North Private Limited	C-252-A, Malviya Nagar, Hans Marg, Jaipur, Rajasthan 302017	India
+S1-000037	Indian Brothers North Private Limited	17/1, Lower Ground Floor, 1st Cross, Lalbagh Road, Bangalore, Karnataka 560027	India
+S1-000038	Apex Technologies North LLP	Plot 44, Electronic City Phase 1, Hosur Road, Bangalore, Karnataka 560100	India
+S1-000039	Kalyan Jewellers North Limited	Shop 12, Ground Floor, MG Road, Somajiguda, Hyderabad, Telangana 500082	India
+S1-000040	Maruthi Traders North Private Limited	4-1-898, Tilak Road, Abids, Hyderabad, Telangana 500001	India
+S1-000041	Creative Solutions North Private Limited	SCO 88-89, Sector 17-C, Chandigarh, Punjab 160017	India
+S1-000042	Modern Engineering North Limited	B-14, Industrial Area, Phase II, Mayapuri, New Delhi, Delhi 110064	India
+S1-000043	Royal Healthcare North Private Limited	23/4, Park Street, Near Park Plaza, Kolkata, West Bengal 700016	India
+S1-000044	Prime Retail North LLP	55, Commercial Street, Tasker Town, Bangalore, Karnataka 560001	India
+S1-000045	Universal Exports North Limited	Office 402, Trade Centre, BKC, Bandra, Mumbai, Maharashtra 400051	India
+S1-000046	Pacific Coast Logistics North LLC	1420 Harbor Blvd, Suite 300, Long Beach, CA 90802	US
+S1-000047	Hudson River Consulting North Inc	350 5th Avenue, 59th Floor, New York, NY 10118	US
+S1-000048	Lone Star Manufacturing North Corp	1200 Industrial Parkway, Building B, Houston, TX 77041	US
+S1-000049	Midwest Agricultural Supplies North LLC	4450 Cornhusker Highway, Lincoln, NE 68504	US
+S1-000050	Summit Peak Software North Inc	1801 California Street, Suite 2400, Denver, CO 80202	US
+S1-000051	Great Lakes Distribution North Corporation	600 Renaissance Center, Suite 1400, Detroit, MI 48243	US
+S1-000052	Chesapeake Maritime Services North LLC	201 E Baltimore Street, 12th Floor, Baltimore, MD 21202	US
+S1-000053	Sonoran Desert Energy North Corp	2400 E Camelback Road, Suite 700, Phoenix, AZ 85016	US
+S1-000054	Cascade Timber Holdings North LLC	111 SW 5th Avenue, Suite 1900, Portland, OR 97204	US
+S1-000055	New England Bioscience North Inc	75 Cambridge Parkway, Suite 400, Cambridge, MA 02142	US
+S1-000056	Atelier Du Rhone North SARL	14 Rue De La Republique, Lyon, Auvergne-Rhone-Alpes 69002	France
+S1-000057	Bordeaux Vignobles Distribution North SAS	25 Cours De L Intendance, Bordeaux, Nouvelle-Aquitaine 33000	France
+S1-000058	Parisienne De Conseils North Societe	42 Avenue Montaigne, Paris, Ile-De-France 75008	France
+S1-000059	Provence Logistique Transport North SARL	120 Boulevard National, Marseille, Provence-Alpes-Cote d Azur 13003	France
+S1-000060	Nord Industrie Mecanique North SAS	58 Rue Nationale, Lille, Hauts-De-France 59000	France
+S1-000061	Dream Construction South Limited	16-11-23/37/A, Sagar Hotel Building, Osarambagh, Hyderabad, Telangana 500036	India
+S1-000062	Green Logistics South Private Limited	E-7, Second Floor, South Extension, New Delhi, Delhi 110049	India
+S1-000063	Silver Constructions South LLP	101 CTS No, 917/18 F P No, British Library Road, Pune, Maharashtra 411004	India
+S1-000064	Shiva Management South Private Limited	D No. 20-6-3/12, Dantuluri Vari Street, Ayodyanagar, Vijayawada, Andhra Pradesh 520003	India
+S1-000065	Alpha Media South Private Limited	28-B, Chand Bihari Nagar, Khatipura, Jaipur, Rajasthan 302012	India
+S1-000066	Surya Energy South Private Limited	C-252-A, Malviya Nagar, Hans Marg, Jaipur, Rajasthan 302017	India
+S1-000067	Indian Brothers South Private Limited	17/1, Lower Ground Floor, 1st Cross, Lalbagh Road, Bangalore, Karnataka 560027	India
+S1-000068	Apex Technologies South LLP	Plot 44, Electronic City Phase 1, Hosur Road, Bangalore, Karnataka 560100	India
+S1-000069	Kalyan Jewellers South Limited	Shop 12, Ground Floor, MG Road, Somajiguda, Hyderabad, Telangana 500082	India
+S1-000070	Maruthi Traders South Private Limited	4-1-898, Tilak Road, Abids, Hyderabad, Telangana 500001	India
+S1-000071	Creative Solutions South Private Limited	SCO 88-89, Sector 17-C, Chandigarh, Punjab 160017	India
+S1-000072	Modern Engineering South Limited	B-14, Industrial Area, Phase II, Mayapuri, New Delhi, Delhi 110064	India
+S1-000073	Royal Healthcare South Private Limited	23/4, Park Street, Near Park Plaza, Kolkata, West Bengal 700016	India
+S1-000074	Prime Retail South LLP	55, Commercial Street, Tasker Town, Bangalore, Karnataka 560001	India
+S1-000075	Universal Exports South Limited	Office 402, Trade Centre, BKC, Bandra, Mumbai, Maharashtra 400051	India
+S1-000076	Pacific Coast Logistics South LLC	1420 Harbor Blvd, Suite 300, Long Beach, CA 90802	US
+S1-000077	Hudson River Consulting South Inc	350 5th Avenue, 59th Floor, New York, NY 10118	US
+S1-000078	Lone Star Manufacturing South Corp	1200 Industrial Parkway, Building B, Houston, TX 77041	US
+S1-000079	Midwest Agricultural Supplies South LLC	4450 Cornhusker Highway, Lincoln, NE 68504	US
+S1-000080	Summit Peak Software South Inc	1801 California Street, Suite 2400, Denver, CO 80202	US
+S1-000081	Great Lakes Distribution South Corporation	600 Renaissance Center, Suite 1400, Detroit, MI 48243	US
+S1-000082	Chesapeake Maritime Services South LLC	201 E Baltimore Street, 12th Floor, Baltimore, MD 21202	US
+S1-000083	Sonoran Desert Energy South Corp	2400 E Camelback Road, Suite 700, Phoenix, AZ 85016	US
+S1-000084	Cascade Timber Holdings South LLC	111 SW 5th Avenue, Suite 1900, Portland, OR 97204	US
+S1-000085	New England Bioscience South Inc	75 Cambridge Parkway, Suite 400, Cambridge, MA 02142	US
+S1-000086	Atelier Du Rhone South SARL	14 Rue De La Republique, Lyon, Auvergne-Rhone-Alpes 69002	France
+S1-000087	Bordeaux Vignobles Distribution South SAS	25 Cours De L Intendance, Bordeaux, Nouvelle-Aquitaine 33000	France
+S1-000088	Parisienne De Conseils South Societe	42 Avenue Montaigne, Paris, Ile-De-France 75008	France
+S1-000089	Provence Logistique Transport South SARL	120 Boulevard National, Marseille, Provence-Alpes-Cote d Azur 13003	France
+S1-000090	Nord Industrie Mecanique South SAS	58 Rue Nationale, Lille, Hauts-De-France 59000	France
