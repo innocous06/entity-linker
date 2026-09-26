@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.generate_synthetic_data import generate_mock_datasets
 from src.pipeline import EntityResolutionPipeline
 
 def main():
@@ -20,8 +19,7 @@ def main():
     work_dir = ROOT / "workspace"
 
     if not (data_dir / "train_source1.tsv").exists():
-        print("[INFO] Generating synthetic benchmark sample data...")
-        generate_mock_datasets(data_dir)
+        raise FileNotFoundError(f"Sample data not found in {data_dir}. Please ensure sample_data TSV files exist.")
 
     pipeline = EntityResolutionPipeline(data_dir=data_dir, work_dir=work_dir)
 

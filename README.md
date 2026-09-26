@@ -206,7 +206,6 @@ Evaluated on 5,000 real primary records against 1,000,000 India and 1,535,000 US
 - **Limitations & Mathematical Bounds**: [`docs/limitations.md`](docs/limitations.md)
 - **Literature References**: [`docs/references.md`](docs/references.md)
 - **Unconstrained Hardware Future Architecture (0.98+ Roadmap)**: [`docs/future-architecture.md`](docs/future-architecture.md)
-- **GPU Retrieval & Reranker Prototype**: [`scripts/unconstrained_pipeline_blueprint.py`](scripts/unconstrained_pipeline_blueprint.py)
 
 ---
 
