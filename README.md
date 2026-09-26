@@ -72,7 +72,33 @@ The problem is complicated by:
 
 ---
 
-## 3. Quick Start
+## 3. Engineering Trade-Off: Unconstrained SOTA vs. Memory-Optimized Architecture
+
+### What Could Be Done in an Unconstrained Setting (Local GPU Rig)
+
+In a hardware environment with unconstrained RAM (64 GB - 128 GB) and dedicated NVIDIA GPUs:
+1. **Dense Bi-Encoder Retrieval**: Fine-tuning a multilingual Sentence Transformer (e.g. `BGE-M3` or `multilingual-e5`) to encode business names and addresses into 1024-dimensional vectors, indexing 5M records in a GPU-accelerated FAISS/HNSW index. This provides semantic matching even when lexical overlap is zero (e.g. `Orchid Renewable` -> `Smt BRIXUMBRABELO`), pushing candidate recall past 98%.
+2. **Cross-Encoder Transformer Reranker**: Passing top 20 candidates per entity to a Cross-Encoder (e.g. `DeBERTa-v3` or `BGE-Reranker-Large`) computing full all-to-all attention across primary and candidate tokens, pushing precision past 99%.
+3. **Global Bipartite Graph Matching**: Solving maximum-weight bipartite matching across candidate probability graphs to eliminate multi-target duplicate conflicts.
+
+### The Memory Problem & Real-World Bottlenecks
+
+In cloud developer environments or memory-bounded servers (<40 GB RAM, CPU-only):
+- Storing 5M dense 1024-dimensional float32 vectors requires over 20 GB of RAM/VRAM for embeddings alone.
+- Generating 70M+ candidate pairs in Python heap and serializing them across multiprocessing workers via IPC caused immediate Out-Of-Memory (OOM) crashes (>45 GB RAM consumption).
+- Ephemeral cloud instances without 24 GB VRAM GPUs make dense neural reranking across millions of candidate pairs computationally prohibitive.
+
+### How I Optimized to Counter the Memory Problem
+
+To deliver a functional, high-throughput solution under a strict memory envelope (<4 GB RAM) without specialized hardware:
+1. **Out-of-Core Chunk Streaming**: Replaced in-memory candidate lists with streaming batches that flush 100,000 candidate pairs directly to Snappy-compressed Parquet chunks on disk. Chunks are merged via DuckDB out-of-core columnar execution, bounding peak RAM to **< 3.2 GB**.
+2. **IDF-Weighted Token Indexing**: Rather than flat count matching, precomputed token Inverse Document Frequency (`IDF = ln((N + 1) / (df + 1))`). High-frequency uninformative words are deleted from the index, eliminating positional bias and breaking score ties to reach 91.1% recall.
+3. **Inverse Transliteration De-Noising**: Replaced heavy neural models with deterministic regex transforms (vowel/consonant deduplication `(.)\1+` -> `\1`, phonetic legal suffix mapping `elelpii` -> `LLP`, building unit identifier extraction) that collapse corrupted strings to canonical forms upfront with zero GPU compute.
+4. **Group-Aware Tabular GBDT**: Extracted 26 lightweight pairwise lexical, phonetic, and geographical features scored with LightGBM and calibrated decision thresholds.
+
+---
+
+## 4. Quick Start
 
 ### Installation
 
@@ -102,7 +128,7 @@ python -m src.pipeline --data-dir path/to/tsv_folder --work-dir workspace --pred
 
 ---
 
-## 4. Architecture & Data Flow
+## 5. Architecture & Data Flow
 
 For detailed specifications, invariants, and failure matrices, see [`docs/design.md`](docs/design.md).
 
@@ -145,7 +171,7 @@ Source 1 (Primary)            Target Sources (S2 & S3)
 
 ---
 
-## 5. Key Engineering Decisions
+## 6. Key Engineering Decisions
 
 Architectural alternatives and trade-offs are logged in [`docs/decisions.md`](docs/decisions.md).
 
@@ -156,7 +182,7 @@ Architectural alternatives and trade-offs are logged in [`docs/decisions.md`](do
 
 ---
 
-## 6. Empirical Benchmark Results
+## 7. Empirical Benchmark Results
 
 Evaluated on 5,000 real primary records against 1,000,000 India and 1,535,000 US candidate records on an AMD Ryzen 7 7735HS Windows 11 system:
 
@@ -172,7 +198,7 @@ Evaluated on 5,000 real primary records against 1,000,000 India and 1,535,000 US
 
 ---
 
-## 7. Documentation
+## 8. Documentation
 
 - **System Design & Invariants**: [`docs/design.md`](docs/design.md)
 - **Architecture Decisions**: [`docs/decisions.md`](docs/decisions.md)
@@ -182,7 +208,7 @@ Evaluated on 5,000 real primary records against 1,000,000 India and 1,535,000 US
 
 ---
 
-## 8. Limitations
+## 9. Limitations
 
 - **Candidate Recall Ceiling**: The inverted index achieves 88% - 91% recall at top-100 candidates. Matches omitted from the candidate set cannot be recovered by downstream classifiers.
 - **Rule-Based Transliteration**: Normalization targets Latin-transliterated Indian, US, and French business registries. Un-transliterated scripts (e.g. Devanagari) require grapheme-to-phoneme models.
@@ -192,6 +218,6 @@ See [`docs/limitations.md`](docs/limitations.md) for complete analysis.
 
 ---
 
-## 9. License
+## 10. License
 
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.

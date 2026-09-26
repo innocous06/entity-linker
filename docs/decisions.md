@@ -55,3 +55,15 @@ Decision: Option 2.
 Why: Optimal operating threshold shifts depending on class imbalance (~1:15 positive-to-negative ratio). Calibration yields 5-10% higher F0.5 on held-out entities.
 Trade-off: Requires computing entity-level macro metrics during hyperparameter search.
 Revisit if: Objective switches to F1 or F2.
+
+## D-006: Out-of-Core Tabular Streaming vs. Dense Neural Embeddings under Memory Limits
+Date: 2026-09-27
+Context: Dense bi-encoder transformers (BGE-M3, multilingual-e5) paired with GPU-accelerated FAISS search deliver higher recall on extreme phonemic shifts. However, storing 5M 1024-dimensional float32 embeddings requires >20 GB RAM for vectors alone, and generating 70M+ candidate pairs across multiprocessing workers caused instant out-of-memory crashes on cloud runtimes with 48 GB limits.
+Options considered:
+1. Dense bi-encoder vector embeddings with FAISS/HNSW index.
+2. In-memory multiprocessing inverted index.
+3. Out-of-core streaming inverted index with IDF weighting, disk-backed chunk flushing, and DuckDB merging.
+Decision: Option 3.
+Why: Guaranteed memory bound (<3.2 GB peak RAM) allowing reliable execution on standard developer laptops and cloud instances. High throughput (~500 queries/sec per CPU core) without GPU hardware dependencies.
+Trade-off: Misses extreme multi-token phonemic shifts where lexical overlap is 0%, capping candidate recall at ~91% vs. theoretical 98%+ with dense vectors.
+Revisit if: Dedicated workstation with 64 GB+ RAM and 24 GB VRAM GPU is available.
